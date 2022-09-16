@@ -1,9 +1,9 @@
 import style from "./css/style.css";
-import { renderMap, renderSnake, newSnakePart, renderFood, renderStartScreen } from "./js/renderGame";
+import { renderGame, newSnakePart, renderFood } from "./js/renderGame";
 
-const startScreen = renderStartScreen(startGame);
+const startScreen = renderGame.startScreen(startGame);
 
-let map = renderMap();
+let map = null;
 let snake = null;
 let food = [];
 let foodInterval = null;
@@ -101,11 +101,12 @@ function stopGame() {
 }
 
 function startGame() {
-   map.remove();
-   map = renderMap();
+   if (map !== null) map.remove();
+
+   map = renderGame.map();
    document.body.append(map);
 
-   snake = renderSnake(map);
+   snake = renderGame.snake(map);
    food = [];
 
    foodInterval = setInterval(createFood, 1000);

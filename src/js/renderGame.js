@@ -102,6 +102,11 @@ const renderSnake = mapContener => {
    return { size: 2, direction: [null, newDirection], parts };
 };
 
+const renderGame = {
+   startScreen: renderStartScreen,
+   map: renderMap,
+   snake: renderSnake,
+};
 //export
 
-export { renderMap, renderSnake, newSnakePart, renderFood, renderStartScreen };
+export { renderGame, newSnakePart, renderFood };
