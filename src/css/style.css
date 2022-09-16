@@ -1,0 +1,64 @@
+body {
+   margin: 0;
+   background-color: rgb(175, 175, 175);
+}
+
+.game {
+   cursor: none;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 80vh;
+   height: 80vh;
+   display: grid;
+   gap: 5px;
+   grid-template-columns: repeat(15, 1fr);
+   grid-template-rows: repeat(15, 1fr);
+}
+
+.game > div {
+   border: 1px solid blue;
+}
+
+.snake-head {
+   background-color: rgb(75, 0, 6);
+}
+
+.snake-body {
+   background-color: rgb(72, 0, 87);
+   border-radius: 5px;
+}
+
+.food {
+   background-color: black;
+   border-radius: 50%;
+}
+
+.startScreen {
+   opacity: 0;
+   position: absolute;
+   width: 100%;
+   height: 100vh;
+   background-color: rgba(0, 0, 0, 0.479);
+   z-index: 1;
+   transition: all 1s;
+}
+
+.active {
+   opacity: 1;
+}
+
+.startScreen ~ .game {
+   filter: blur(2px);
+}
+
+.startScreen__content {
+   text-align: center;
+   color: white;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
