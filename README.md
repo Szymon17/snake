@@ -9,7 +9,7 @@
   -the first script with name "renderGame" rendering elements like snake, snake parts, map or food
   -the second script "app" is a main game logic and game initialization.
 
-#Control
+#Controls
  - W: up
  - S: down
  - A: left
