@@ -10,7 +10,7 @@
   -the second script "app" is a main game logic and game initialization.
 
 #Control
-  W === up
-  S === down
-  A === left
-  D === right
+ - W: up
+ - S: down
+ - A: left
+ - D: right
